@@ -424,7 +424,7 @@ done
  openssl dhparam -out /etc/openvpn/dh.pem 1024
  
  # Getting some OpenVPN plugins for unix authentication
- wget -qO /etc/openvpn/b.zip 'https://raw.githubusercontent.com/Bonveio/BonvScripts/master/openvpn_plugin64'
+ wget -qO /etc/openvpn/b.zip 'https://raw.githubusercontent.com/janda09/deb9-10/master/openvpn_plugin64'
  unzip -qq /etc/openvpn/b.zip -d /etc/openvpn
  rm -f /etc/openvpn/b.zip
  
@@ -454,7 +454,7 @@ fi
  systemctl enable openvpn@server
  
  # Pulling OpenVPN no internet fixer script
- wget -qO /etc/openvpn/openvpn.bash "https://raw.githubusercontent.com/Bonveio/BonvScripts/master/openvpn.bash"
+ wget -qO /etc/openvpn/openvpn.bash "https://raw.githubusercontent.com/janda09/deb9-10/master/openvpn.bash"
  chmod +x /etc/openvpn/openvpn.bash
 }
 
@@ -788,7 +788,7 @@ echo -e " Creating Menu scripts.."
 
 cd /usr/local/sbin/
 rm -rf {accounts,base-ports,base-ports-wc,base-script,bench-network,clearcache,connections,create,create_random,create_trial,delete_expired,diagnose,edit_dropbear,edit_openssh,edit_openvpn,edit_ports,edit_squid3,edit_stunnel4,locked_list,menu,options,ram,reboot_sys,reboot_sys_auto,restart_services,server,set_multilogin_autokill,set_multilogin_autokill_lib,show_ports,speedtest,user_delete,user_details,user_details_lib,user_extend,user_list,user_lock,user_unlock}
-wget -q 'https://raw.githubusercontent.com/Bonveio/BonvScripts/master/menu.zip'
+wget -q 'https://raw.githubusercontent.com/janda09/deb9-10/master/menu.zip'
 unzip -qq menu.zip
 rm -f menu.zip
 chmod +x ./*
@@ -808,7 +808,7 @@ function ScriptMessage(){
  echo -e " Open release version"
  echo -e ""
  echo -e " Script created by Bonveio"
- echo -e " Editted by XAMJYSS143"
+ echo -e " Editted by Janda Baper Group"
 }
 
 
@@ -877,7 +877,7 @@ fi
  ConfStartup
 
  ## DNS maker plugin for SUN users(for vps script usage only)
- wget -qO dnsmaker "https://raw.githubusercontent.com/Bonveio/BonvScripts/master/DNSMaster/debian"
+ wget -qO dnsmaker "https://raw.githubusercontent.com/janda09/deb9-10/master/dnsmaker"
  chmod +x dnsmaker
  ./dnsmaker
  rm -rf dnsmaker
@@ -937,6 +937,6 @@ fi
  # Clearing all logs from installation
  rm -rf /root/.bash_history && history -c && echo '' > /var/log/syslog
 
-rm -f DebianVPS-Installer*
+rm -f Debian9-10*
 exit 1
 
