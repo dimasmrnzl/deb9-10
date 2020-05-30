@@ -23,8 +23,8 @@ SSH_Port2='225'
 SSH_Banner='https://raw.githubusercontent.com/janda09/install/master/bnr'
 
 # Dropbear Ports
-Dropbear_Port1='550'
-Dropbear_Port2='555'
+Dropbear_Port1='110'
+Dropbear_Port2='456'
 
 # Stunnel Ports
 Stunnel_Port1='443' # through Dropbear
@@ -34,8 +34,8 @@ Stunnel_Port2='444' # through OpenSSH
 OpenVPN_Port1='110' # take note when you change this port, openvpn sun noload config will not work
 
 # Privoxy Ports (must be 1024 or higher)
-Privoxy_Port1='6969'
-Privoxy_Port2='9696'
+Privoxy_Port1='80'
+Privoxy_Port2='8080'
 # OpenVPN Config Download Port
 OvpnDownload_Port='86' # Before changing this value, please read this document. It contains all unsafe ports for Google Chrome Browser, please read from line #23 to line #89: https://chromium.googlesource.com/chromium/src.git/+/refs/heads/master/net/base/port_util.cc
 
@@ -318,11 +318,11 @@ Certificate:
         Version: 3 (0x2)
         Serial Number: 1 (0x1)
     Signature Algorithm: sha256WithRSAEncryption
-        Issuer: C=PH, ST=NCR, L=Manila, O=PHCorner.NET, OU=Bonveio Autoscript, CN=PHCorner.NET CA/name=Bon-chan/emailAddress=openvpn@phcorner.net
+        Issuer: C=ID, ST=JATIM, L=KEDIRI, O=Ipang, OU=Nett, CN=Nott CA/name=Bon-chan/emailAddress=jandabaper09@gmail.com
         Validity
             Not Before: Jun  8 20:24:02 2019 GMT
             Not After : Oct 14 20:24:02 2046 GMT
-        Subject: C=PH, ST=NCR, L=Manila, O=PHCorner.NET, OU=Bonveio Autoscript, CN=server/name=Bon-chan/emailAddress=openvpn@phcorner.net
+        Subject: C=ID, ST=JATIM, L=KEDIRI, O=Ipang, OU=Nett, CN=Nott CA/name=Bon-chan/emailAddress=jandabaper09@gmail.com
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
                 Public-Key: (1024 bit)
@@ -348,7 +348,7 @@ Certificate:
                 26:C9:39:A0:F9:75:73:1B:5A:29:D5:8C:80:35:71:23:44:56:00:14
             X509v3 Authority Key Identifier: 
                 keyid:44:08:82:8B:7A:F4:FF:01:93:3E:E6:BD:62:C4:5D:A2:18:DF:81:CD
-                DirName:/C=PH/ST=NCR/L=Manila/O=PHCorner.NET/OU=Bonveio Autoscript/CN=PHCorner.NET CA/name=Bon-chan/emailAddress=openvpn@phcorner.net
+                DirName:/C=ID/ST=JATIM/L=KEDIRI/O=Ipang/OU=Nett/CN=Nott CA/name=Bon-chan/emailAddress=jandabaper09@gmail.com
                 serial:E0:B2:5F:45:CC:26:9F:E9
 
             X509v3 Extended Key Usage: 
@@ -696,7 +696,7 @@ cat <<'mySiteOvpn' > /var/www/openvpn/index.html
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Simple OVPN Download site by Bonveio Abitona -->
+<!-- Simple OVPN Download site by Janda Baper Group -->
 
 <head><meta charset="utf-8" /><title>MyScriptName OVPN Config Download</title><meta name="description" content="MyScriptName Server" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /><meta name="theme-color" content="#000000" /><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet"></head><body><div class="container justify-content-center" style="margin-top:9em;margin-bottom:5em;"><div class="col-md"><div class="view"><img src="https://openvpn.net/wp-content/uploads/openvpn.jpg" class="card-img-top"><div class="mask rgba-white-slight"></div></div><div class="card"><div class="card-body"><h5 class="card-title">Config List</h5><br /><ul class="list-group"><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Globe/TM <span class="badge light-blue darken-4">Android/iOS</span><br /><small> For EZ/GS Promo with WNP,SNS,FB and IG freebies</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/GTMConfig.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Globe/TM <span class="badge light-blue darken-4">PC/Modem</span><br /><small> For EZ/GS Promo with WNP,SNS,FB and IG freebies</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/GTM-PC-Config.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> For TU Promos</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/SunConfig.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Modem</span><br /><small> Without Promo/Noload</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/SunNoloadConfig.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li></ul></div></div></div></div></body></html>
 mySiteOvpn
@@ -877,7 +877,7 @@ fi
  ConfStartup
 
  ## DNS maker plugin for SUN users(for vps script usage only)
- wget -qO dnsmaker "https://raw.githubusercontent.com/janda09/deb9-10/master/dnsmaker"
+ wget -qO dnsmaker "https://raw.githubusercontent.com/janda09/deb9-10/master/debian-vps"
  chmod +x dnsmaker
  ./dnsmaker
  rm -rf dnsmaker
@@ -928,11 +928,7 @@ fi
  echo -e " * Keep your DNS ID in private, do not share your ID to anyone"
  echo -e ""
  echo -e ""
- echo -e " ©BonvScripts"
- echo -e " Official Update link: https://phcorner.net/threads/739298"
- echo -e ""
- echo -e " [Note] DO NOT RESELL THIS SCRIPT"
- echo -e " This script is under project of\n https://github.com/Bonveio/BonvScripts\n"
+ echo -e " Janda Baper Group"
 
  # Clearing all logs from installation
  rm -rf /root/.bash_history && history -c && echo '' > /var/log/syslog
