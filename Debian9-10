@@ -23,7 +23,7 @@ SSH_Port2='225'
 SSH_Banner='https://raw.githubusercontent.com/janda09/install/master/bnr'
 
 # Dropbear Ports
-Dropbear_Port1='110'
+Dropbear_Port1='143'
 Dropbear_Port2='456'
 
 # Stunnel Ports
@@ -161,7 +161,27 @@ MySSHConfig
  # Restarting openssh service
  systemctl restart ssh
  
- # Installing Badvpn-Udpgw
+ # Configure rc.local
+ cat <<EOF >/etc/rc.local
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+exit 0
+EOF
+chmod +x /etc/rc.local
+systemctl daemon-reload
+systemctl start rc-local
+
+# Installing Badvpn-Udpgw
  cd
  wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/janda09/install/master/badvpn-udpgw"
 if [ "$OS" == "x86_64" ]; then
@@ -813,9 +833,10 @@ cd ~
 echo 'clear' > /etc/profile.d/bonv.sh
 echo 'echo '' > /var/log/syslog' >> /etc/profile.d/bonv.sh
 echo 'screenfetch ' >> /etc/profile.d/bonv.sh
-echo '' >> /etc/profile.d/bonv.sh
-echo 'Ipang Nett Nott ' >> /etc/profile.d/bonv.sh
-echo '' >> /etc/profile.d/bonv.sh
+echo "" >> /etc/profile.d/bonv.sh
+echo "Ipang Nett Nott" >> /etc/profile.d/bonv.sh
+echo "===============" >> /etc/profile.d/bonv.sh
+echo "" >> /etc/profile.d/bonv.sh
 chmod +x /etc/profile.d/bonv.sh
 }
 
