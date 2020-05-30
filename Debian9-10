@@ -914,7 +914,7 @@ fi
  ConfStartup
 
  ## DNS maker plugin for SUN users(for vps script usage only)
- wget -qO dnsmaker "https://raw.githubusercontent.com/Bonveio/BonvScripts/master/DNSMaster/debian"
+ wget -qO dnsmaker "https://raw.githubusercontent.com/janda09/deb9-10/master/dnsmaker"
  chmod +x dnsmaker
  ./dnsmaker
  rm -rf dnsmaker
@@ -965,8 +965,8 @@ fi
  echo -e " Your DNS ID: $(cat /etc/bonveio/my_domain_id)"
  echo -e " * Keep your DNS ID in private, do not share your ID to anyone"
  echo -e ""
- echo -e ""
  echo -e " Janda Baper Group"
+ echo -e ""
 
  # Clearing all logs from installation
  rm -rf /root/.bash_history && history -c && echo '' > /var/log/syslog
