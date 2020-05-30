@@ -809,10 +809,13 @@ dos2unix ./* &> /dev/null
 sed -i 's|/etc/squid/squid.conf|/etc/privoxy/config|g' ./*
 sed -i 's|http_port|listen-address|g' ./*
 cd ~
-
+#creating baner distro
 echo 'clear' > /etc/profile.d/bonv.sh
 echo 'echo '' > /var/log/syslog' >> /etc/profile.d/bonv.sh
-echo 'screenfetch -p -A Android' >> /etc/profile.d/bonv.sh
+echo 'screenfetch ' >> /etc/profile.d/bonv.sh
+echo '' >> /etc/profile.d/bonv.sh
+echo 'Ipang Nett Nott ' >> /etc/profile.d/bonv.sh
+echo '' >> /etc/profile.d/bonv.sh
 chmod +x /etc/profile.d/bonv.sh
 }
 
