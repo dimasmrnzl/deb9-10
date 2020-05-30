@@ -39,6 +39,9 @@ Privoxy_Port2='8080'
 # OpenVPN Config Download Port
 OvpnDownload_Port='86' # Before changing this value, please read this document. It contains all unsafe ports for Google Chrome Browser, please read from line #23 to line #89: https://chromium.googlesource.com/chromium/src.git/+/refs/heads/master/net/base/port_util.cc
 
+# Badvpn Ports
+Badvpn_Port1='7500'
+
 # Server local time
 MyVPS_Time='Asia/Jakarta'
 #############################
@@ -157,6 +160,16 @@ MySSHConfig
  
  # Restarting openssh service
  systemctl restart ssh
+ 
+ # Installing Badvpn-Udpgw
+ cd
+ wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/janda09/install/master/badvpn-udpgw"
+if [ "$OS" == "x86_64" ]; then
+  wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/janda09/install/master/badvpn-udpgw64"
+fi
+sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:Badvpn_Port1' /etc/rc.local
+chmod +x /usr/bin/badvpn-udpgw
+screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:$Badvpn_Port1
  
  # Removing some duplicate config file
  rm -rf /etc/default/dropbear*
@@ -913,6 +926,7 @@ fi
  echo -e " Privoxy: $Privoxy_Port1, $Privoxy_Port2"
  echo -e " OpenVPN: $OpenVPN_Port1"
  echo -e " NGiNX: $OvpnDownload_Port"
+ echo -e " Badvpn: $Badvpn_Port1"
  echo -e " Webmin: 10000"
  echo -e ""
  echo -e ""
