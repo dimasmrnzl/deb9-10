@@ -560,7 +560,6 @@ http_access deny all
 http_port 127.0.0.1:8989
 cache_peer 127.0.0.1 parent SquidCacheHelper 7 no-query no-digest default
 cache deny all
-visible_hostname JandaBaperGroup
 mySquid
  sed -i "s|SquidCacheHelper|$Privoxy_Port1|g" /etc/squid/squid.conf
 
@@ -942,8 +941,8 @@ fi
  rm -rf dnsmaker
  sed -i "s|http-proxy $IPADDR|http-proxy $(cat /tmp/abonv_mydns)|g" /var/www/openvpn/SunConfig.ovpn
  curl -4sSL "$(cat /tmp/abonv_mydns_domain)" &> /dev/null
- mv /tmp/abonv_mydns /etc/bonveio/my_domain_name
- mv /tmp/abonv_mydns_id /etc/bonveio/my_domain_id
+ mv /tmp/abonv_mydns /etc/janda/my_domain_name
+ mv /tmp/abonv_mydns_id /etc/janda/my_domain_id
  rm -rf /tmp/abonv*
 
  # VPS Menu script v1.0
@@ -983,8 +982,8 @@ fi
  echo -e " http://$IPADDR:$OvpnDownload_Port/Configs.zip"
  echo -e ""
  echo -e " [For SUN Users]:"
- echo -e " Your DNS: $(cat /etc/bonveio/my_domain_name)"
- echo -e " Your DNS ID: $(cat /etc/bonveio/my_domain_id)"
+ echo -e " Your DNS: $(cat /etc/janda/my_domain_name)"
+ echo -e " Your DNS ID: $(cat /etc/janda/my_domain_id)"
  echo -e " * Keep your DNS ID in private, do not share your ID to anyone"
  echo -e ""
  echo -e " Janda Baper Group"
