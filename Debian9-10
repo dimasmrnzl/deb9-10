@@ -234,7 +234,7 @@ MyStunnelD
  rm -rf /etc/stunnel/*
  
  # Creating stunnel certifcate using openssl
- openssl req -new -x509 -days 9999 -nodes -subj "/C=PH/ST=NCR/L=Manila/O=$MyScriptName/OU=$MyScriptName/CN=$MyScriptName" -out /etc/stunnel/stunnel.pem -keyout /etc/stunnel/stunnel.pem &> /dev/null
+ openssl req -new -x509 -days 9999 -nodes -subj "/C=ID/ST=JATIM/L=KEDIRI/O=NOTT/OU=NETT/CN=IPANG" -out /etc/stunnel/stunnel.pem -keyout /etc/stunnel/stunnel.pem &> /dev/null
 ##  > /dev/null 2>&1
 
  # Creating stunnel server config
