@@ -852,12 +852,12 @@ cd ~
 echo 'clear' > /etc/profile.d/janda.sh
 echo 'echo '' > /var/log/syslog' >> /etc/profile.d/janda.sh
 echo 'screenfetch ' >> /etc/profile.d/janda.sh
-echo "" >> /etc/profile.d/janda.sh
-echo "##############################################" >> /etc/profile.d/janda.sh
-echo "#              Janda Baper Group             #" >> /etc/profile.d/janda.sh
-echo "#               Ipang Nett Nott              #" >> /etc/profile.d/janda.sh
-echo "##############################################" >> /etc/profile.d/janda.sh
-echo "" >> /etc/profile.d/janda.sh
+echo 'echo -e "" ' >> /etc/profile.d/janda.sh
+echo 'echo -e "##############################################" ' >> /etc/profile.d/janda.sh
+echo 'echo -e "#              Janda Baper Group             #" ' >> /etc/profile.d/janda.sh
+echo 'echo -e "#               Ipang Nett Nott              #" ' >> /etc/profile.d/janda.sh
+echo 'echo -e "##############################################" ' >> /etc/profile.d/janda.sh
+echo 'echo -e "" ' >> /etc/profile.d/janda.sh
 chmod +x /etc/profile.d/janda.sh
 }
 
