@@ -7,6 +7,7 @@ Script autoinstall Debian 9 and 10
 <br>SSL      : 443,444
 <br>OpenVPN  : 110
 <br>Squid    : 80,8080
+<br>Badvpn   : 7500
 <br>Nginx    : 86
 <br>Download : http://$IPADDR:86/Configs.zip
 
