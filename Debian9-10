@@ -13,7 +13,7 @@
 #############################
 # Variables (Can be changed depends on your preferred values)
 # Script name
-MyScriptName='Ipang Nett Nott'
+MyScriptName='Janda Baper Grup'
 
 # OpenSSH Ports
 SSH_Port1='22'
@@ -983,11 +983,11 @@ fi
  echo -e ""
  echo -e " All OpenVPN Configs Archive"
  echo -e " http://$IPADDR:$OvpnDownload_Port/janda.zip"
- #echo -e ""
- #echo -e " [For SUN Users]:"
- #echo -e " Your DNS: $(cat /etc/janda/my_domain_name)"
- #echo -e " Your DNS ID: $(cat /etc/janda/my_domain_id)"
- #echo -e " * Keep your DNS ID in private, do not share your ID to anyone"
+ echo -e ""
+ echo -e " [For SUN Users]:"
+ echo -e " Your DNS: $(cat /etc/janda/my_domain_name)"
+ echo -e " Your DNS ID: $(cat /etc/janda/my_domain_id)"
+ echo -e " * Keep your DNS ID in private, do not share your ID to anyone"
  echo -e ""
  echo -e " Janda Baper Group"
  echo -e ""
