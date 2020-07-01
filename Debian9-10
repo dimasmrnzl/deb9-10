@@ -13,7 +13,7 @@
 #############################
 # Variables (Can be changed depends on your preferred values)
 # Script name
-MyScriptName='Janda Baper'
+MyScriptName='Ipang Nett Nott'
 
 # OpenSSH Ports
 SSH_Port1='22'
@@ -134,7 +134,7 @@ PrintMotd no
 ClientAliveInterval 240
 ClientAliveCountMax 2
 UseDNS no
-Banner /etc/banner
+Banner /etc/bnr
 AcceptEnv LANG LC_*
 Subsystem   sftp  /usr/lib/openssh/sftp-server
 MySSHConfig
@@ -765,7 +765,7 @@ mySiteOvpn
  
  # Creating all .ovpn config archives
  cd /var/www/openvpn
- zip -qq -r Configs.zip *.ovpn
+ zip -qq -r janda.zip *.ovpn
  cd
 }
 
@@ -842,9 +842,9 @@ echo -e " Creating Menu scripts.."
 
 cd /usr/local/sbin/
 rm -rf {accounts,base-ports,base-ports-wc,base-script,bench-network,clearcache,connections,create,create_random,create_trial,delete_expired,diagnose,edit_dropbear,edit_openssh,edit_openvpn,edit_ports,edit_squid3,edit_stunnel4,locked_list,menu,options,ram,reboot_sys,reboot_sys_auto,restart_services,server,set_multilogin_autokill,set_multilogin_autokill_lib,show_ports,speedtest,user_delete,user_details,user_details_lib,user_extend,user_list,user_lock,user_unlock}
-wget -q 'https://raw.githubusercontent.com/janda09/deb9-10/master/menu.zip'
-unzip -qq menu.zip
-rm -f menu.zip
+wget -q 'https://raw.githubusercontent.com/janda09/openvpn/master/premi.zip"
+unzip -qq premi.zip
+rm -f premi.zip
 chmod +x ./*
 dos2unix ./* &> /dev/null
 sed -i 's|/etc/squid/squid.conf|/etc/privoxy/config|g' ./*
@@ -982,12 +982,12 @@ fi
  echo -e " http://$IPADDR:$OvpnDownload_Port"
  echo -e ""
  echo -e " All OpenVPN Configs Archive"
- echo -e " http://$IPADDR:$OvpnDownload_Port/Configs.zip"
- echo -e ""
- echo -e " [For SUN Users]:"
- echo -e " Your DNS: $(cat /etc/janda/my_domain_name)"
- echo -e " Your DNS ID: $(cat /etc/janda/my_domain_id)"
- echo -e " * Keep your DNS ID in private, do not share your ID to anyone"
+ echo -e " http://$IPADDR:$OvpnDownload_Port/janda.zip"
+ #echo -e ""
+ #echo -e " [For SUN Users]:"
+ #echo -e " Your DNS: $(cat /etc/janda/my_domain_name)"
+ #echo -e " Your DNS ID: $(cat /etc/janda/my_domain_id)"
+ #echo -e " * Keep your DNS ID in private, do not share your ID to anyone"
  echo -e ""
  echo -e " Janda Baper Group"
  echo -e ""
