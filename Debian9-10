@@ -134,7 +134,7 @@ PrintMotd no
 ClientAliveInterval 240
 ClientAliveCountMax 2
 UseDNS no
-Banner /etc/bnr
+Banner /etc/banner
 AcceptEnv LANG LC_*
 Subsystem   sftp  /usr/lib/openssh/sftp-server
 MySSHConfig
